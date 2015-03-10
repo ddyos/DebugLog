@@ -37,15 +37,15 @@ public class DebugLog{
 
 	private static String createLog( String log ) {
 
-		StringBuffer buffer = new StringBuffer();
-		buffer.append("[");
-		buffer.append(methodName);
-		buffer.append(":");
-		buffer.append(lineNumber);
-		buffer.append("]");
-		buffer.append(log);
+		StringBuilder builder = new StringBuilder();
+		builder.append("[");
+		builder.append(methodName);
+		builder.append(":");
+		builder.append(lineNumber);
+		builder.append("]");
+		builder.append(log);
 
-		return buffer.toString();
+		return builder.toString();
 	}
 	
 	private static void getMethodNames(StackTraceElement[] sElements){
